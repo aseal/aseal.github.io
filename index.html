@@ -1,20 +1,103 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Abhijit's home</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="bootstrap-3.3.2-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">`
+<meta charset="UTF-8">
+<meta name="keywords" content="Abhijit Seal technologist researcher designer developer"/>
+<meta name="author" content="Abhijit Seal" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijit Seal</title>
+
+<!-- =========================
+     STYLESHEETS      
+============================== -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function ($){
+    $('#page_header').load('page_header.html');
+    $('#page_footer').load('page_footer.html');
+    $('ul.nav a[href$="home.html"]').parent().addClass('active');
+});
+</script>
 </head>
+
 <body>
-	<h1>Abhijit Seal</h1>
-	<div class="col-xs-8 pull-right text-right">
-	<ul class="nav nav-pills">
-	  <li><a href="#"><i class="fa fa-stack-overflow"></i></a></li>
-	  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-	  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-	  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-	</ul>
-    <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- =========================
+   PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+	
+	<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+	<div class="container ft-ubuntu">
+		
+		<!-- HEADING -->
+
+		<h2 class="intro">Abhijit Seal</h2>
+		
+		<table cellpadding=3 cellspacing=3 border=0>
+		<tr>
+			<td align=center><img class= "main_img" src="images/IMG_2819.jpg" height="400" width="600"></td>
+			<td></td>
+			<td valign=top><form action="http://www.google.com/search" name=f><input type=hidden name=hl value=en><input type=hidden name=ie value="UTF-8"><input type=hidden name=oe value="UTF-8"><input maxLength=256 size=16 name=q value="sample"><input type=submit value="Google" name=btnG></form></td>
+			</tr>
+
+		<tr>
+			<td valign=top width=35%>
+			<br /> <br />
+			<h4>Professional Me</h4>
+			<p>
+
+			Now, I am Engineer at Vmware. Prior to joining VMware I worked in QLogic at CTO org.
+			<p>
+			My core expertise has been Networking and Fibre Channel. I try to keep myself open to different technologies,
+			and try to work on differnt areas whenever I get an opportunity. 
+			Some of the areas I'm working on right now are - storage, SDN, openStack, Hadoop.
+
+			</td>
+
+		</tr>
+
+		<tr>
+			<td valign=top width=35%>
+			<br />
+			<h4>Personal Me</h4>
+			<p>
+
+			I live in San Jose (Blossom Valley), California with my family and freinds. Before coming to bay area
+			I lived in various parts of India.
+
+			</td>
+		</tr>
+
+		</table>
+
+	</div> <!-- / END BIG CONTANER  -->
+	
+	<br /><br />
+	
+</header> <!-- / END HOME SECTION  -->
+
+<div id="page_footer"></div>
+
+<!-- SCRIPTS -->
+<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
