@@ -24,9 +24,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function ($){
-    $('#page_header').load('page_header.html');
+    $('#page_header').load('page_header.html', function() {
+        $('#page_header ul.nav a[href$="update.html"]').parent().addClass('active');
+    });
     $('#page_footer').load('page_footer.html');
-    $('ul.nav a[href$="update.html"]').parent().addClass('active');
 });
 </script>
 
@@ -46,22 +47,22 @@ jQuery(document).ready(function ($){
 <header id="home" class="header">
 
 <div id="page_header"></div>
-	
-	
-	<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
-	<div class="container ft-ubuntu">
-		
-		<!-- HEADING -->
-		<h2>July 31, 2015</h2>
-		<p>Today I got locked out with my daughter without phone, wallet and keys. We had a nice daddy and daughter homeless adventure for few hours. It got me thinking about another aspect of life. Today I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i></p>
+    
+    
+    <!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+    <div class="container ft-ubuntu">
+        
+        <!-- HEADING -->
+        <h2>July 31, 2015</h2>
+        <p>Today I got locked out with my daughter without phone, wallet and keys. We had a nice daddy and daughter homeless adventure for few hours. It got me thinking about another aspect of life. Today I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i></p>
 
-		<h2>July 30, 2015</h2>
-
-
-		<p>Today I went to VMware intern poster presentation. I was feeling very nostalgic. In my school days, I used to participate in many science exhibitions. I should go to this kind of presentations more often. It reminds me that there are so many things to do, and all the things are not that difficult. I'm not sure, if I can share anything about the demos here. So holding my temptation.</p>
+        <h2>July 30, 2015</h2>
 
 
-	</div> <!-- / END BIG CONTANER  -->
+        <p>Today I went to VMware intern poster presentation. I was feeling very nostalgic. In my school days, I used to participate in many science exhibitions. I should go to this kind of presentations more often. It reminds me that there are so many things to do, and all the things are not that difficult. I'm not sure, if I can share anything about the demos here. So holding my temptation.</p>
+
+
+    </div> <!-- / END BIG CONTANER  -->
 
 </header> <!-- / END HOME SECTION  -->
 

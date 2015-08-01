@@ -23,9 +23,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function ($){
-    $('#page_header').load('page_header.html');
+    $('#page_header').load('page_header.html', function() {
+        $('#page_header ul.nav a[href$="home.html"]').parent().addClass('active');
+    });
     $('#page_footer').load('page_footer.html');
-    $('ul.nav a[href$="home.html"]').parent().addClass('active');
 });
 </script>
 </head>
@@ -44,55 +45,55 @@ jQuery(document).ready(function ($){
 ============================== -->
 <header id="home" class="header">
 <div id="page_header"></div>
-	
-	<!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
-	<div class="container ft-ubuntu">
-		
-		<!-- HEADING -->
+    
+    <!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+    <div class="container ft-ubuntu">
+        
+        <!-- HEADING -->
 
-		<h2 class="intro">Abhijit Seal</h2>
-		
-		<table cellpadding=3 cellspacing=3 border=0>
-		<tr>
-			<td align=center><img class= "main_img" src="images/IMG_2819.jpg" height="400" width="600"></td>
-			<td></td>
-			<td valign=top><form action="http://www.google.com/search" name=f><input type=hidden name=hl value=en><input type=hidden name=ie value="UTF-8"><input type=hidden name=oe value="UTF-8"><input maxLength=256 size=16 name=q value="sample"><input type=submit value="Google" name=btnG></form></td>
-			</tr>
+        <h2 class="intro">Abhijit Seal</h2>
+        
+        <table cellpadding=3 cellspacing=3 border=0>
+        <tr>
+            <td align=center><img class= "main_img" src="images/IMG_2819.jpg" height="400" width="600"></td>
+            <td></td>
+            <td valign=top><form action="http://www.google.com/search" name=f><input type=hidden name=hl value=en><input type=hidden name=ie value="UTF-8"><input type=hidden name=oe value="UTF-8"><input maxLength=256 size=16 name=q value="sample"><input type=submit value="Google" name=btnG></form></td>
+            </tr>
 
-		<tr>
-			<td valign=top width=35%>
-			<br /> <br />
-			<h4>Professional Me</h4>
-			<p>
+        <tr>
+            <td valign=top width=35%>
+            <br /> <br />
+            <h4>Professional Me</h4>
+            <p>
 
-			Now, I am Engineer at Vmware. Prior to joining VMware I worked in QLogic at CTO org.
-			<p>
-			My core expertise has been Networking and Fibre Channel. I try to keep myself open to different technologies,
-			and try to work on differnt areas whenever I get an opportunity. 
-			Some of the areas I'm working on right now are - storage, SDN, openStack, Hadoop.
+            I am Engineer at Vmware. Prior to joining VMware I worked in QLogic at CTO org.
+            <p>
+            My core expertise is Networking and Fibre Channel. I try to keep myself open to different 
+            technologies, and try to work on differnt areas whenever I get an opportunity. 
+            Some of the areas I'm working on right now are - storage, SDN, openStack, Hadoop.
 
-			</td>
+            </td>
 
-		</tr>
+        </tr>
 
-		<tr>
-			<td valign=top width=35%>
-			<br />
-			<h4>Personal Me</h4>
-			<p>
+        <tr>
+            <td valign=top width=35%>
+            <br />
+            <h4>Personal Me</h4>
+            <p>
 
-			I live in San Jose (Blossom Valley), California with my family and freinds. Before coming to bay area
-			I lived in various parts of India.
+            I live in San Jose (Blossom Valley), California with my family and freinds. Before coming to bay area
+            I lived in various parts of India.
 
-			</td>
-		</tr>
+            </td>
+        </tr>
 
-		</table>
+        </table>
 
-	</div> <!-- / END BIG CONTANER  -->
-	
-	<br /><br />
-	
+    </div> <!-- / END BIG CONTANER  -->
+    
+    <br /><br />
+    
 </header> <!-- / END HOME SECTION  -->
 
 <div id="page_footer"></div>
