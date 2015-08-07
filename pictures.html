@@ -8,16 +8,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhijit Seal</title>
 
+<!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
 <!-- =========================
      STYLESHEETS      
 ============================== -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-
-<!-- WEBFONT -->
-<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
 
 
 <!-- JQUERY -->
@@ -28,6 +29,22 @@ jQuery(document).ready(function ($){
         $('#page_header ul.nav a[href$="update.html"]').parent().addClass('active');
     });
     $('#page_footer').load('page_footer.html');
+
+	$("#owl-demo").owlCarousel({
+ 
+		navigation : true, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true
+ 
+		// "singleItem:true" is a shortcut for:
+		// items : 1, 
+		// itemsDesktop : false,
+		// itemsDesktopSmall : false,
+		// itemsTablet: false,
+		// itemsMobile : false
+ 
+	});
 });
 </script>
 
@@ -47,23 +64,26 @@ jQuery(document).ready(function ($){
 <header id="home" class="header">
 
 <div id="page_header"></div>
-    
+
+    <div class="container ft-pacifico">
+
+		<h1 align=center>Aditi</h1>
+
+		<div id="owl-demo" class="owl-carousel owl-theme">
+ 
+			<div class="item"><img src="images/zoya1.jpg" alt="zoya1"></div>
+			<div class="item"><img src="images/zoya2.jpg" alt="zoya2"></div>
+			<div class="item"><img src="images/zoya3.jpg" alt="zoya3"></div>
+			<div class="item"><img src="images/zoya4.jpg" alt="zoya4"></div>
+			<div class="item"><img src="images/zoya5.jpg" alt="zoya5"></div>
+			<div class="item"><img src="images/zoya6.jpg" alt="zoya6"></div>
+			<div class="item"><img src="images/zoya7.jpg" alt="zoya7"></div>
+			<div class="item"><img src="images/zoya8.jpg" alt="zoya8"></div>
+ 
+		</div>
     
     <!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
-    <div class="container ft-ubuntu">
         
-        <!-- HEADING -->
-        <h2>July 31, 2015</h2>
-		<p>I finally created this website. I cannot say enough thanks to Bootstrap !!! There has so many attempts to simplify web design, publishing. I think, bootstrap finally nailed it.</p>
-
-        <h2>July 31, 2015</h2>
-        <p>Today I got locked out with my daughter without phone, wallet and keys. We had a nice daddy and daughter homeless adventure for few hours. It got me thinking about another aspect of life. Today I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i></p>
-
-        <h2>July 30, 2015</h2>
-
-
-        <p>Today I went to VMware intern poster presentation. I was feeling very nostalgic. In my school days, I used to participate in many science exhibitions. I should go to this kind of presentations more often. It reminds me that there are so many things to do, and all the things are not that difficult. I'm not sure, if I can share anything about the demos here. So holding my temptation.</p>
-
 
     </div> <!-- / END BIG CONTANER  -->
 
@@ -73,6 +93,7 @@ jQuery(document).ready(function ($){
 
 <!-- SCRIPTS -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 
 </body>
 </html>

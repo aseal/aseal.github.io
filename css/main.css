@@ -6,6 +6,12 @@
 	font-family: 'Architects Daughter', cursive;
     text-shadow: 0 1px 0 #ffffff;
 }
+
+.ft-pacifico {
+	font-family: ‘Metrophobic’, Arial, serif;
+	font-weight: 400;
+}
+
 .nav-pills {
     margin: 0 auto;
     padding: 0;
@@ -51,4 +57,10 @@
 
 .fa-linkedin-square {
     color: #4875B4;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
 }
