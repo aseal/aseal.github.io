@@ -9,6 +9,7 @@
 <title>Abhijit Seal</title>
 
 <!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -32,10 +33,13 @@ jQuery(document).ready(function ($){
 
 	$("#owl-demo").owlCarousel({
  
+ 		margin:100,
 		navigation : true, // Show next and prev buttons
 		slideSpeed : 300,
 		paginationSpeed : 400,
-		singleItem:true
+		singleItem:true,
+		autoPlay:7000,
+		stopOnHover:false,
  
 		// "singleItem:true" is a shortcut for:
 		// items : 1, 
@@ -65,9 +69,10 @@ jQuery(document).ready(function ($){
 
 <div id="page_header"></div>
 
-    <div class="container ft-pacifico">
+    <div class="container ft-ubuntu">
 
-		<h1 align=center>Family</h1>
+		<h1 align=center class="ft-pacifico"><font size="50">Family</font></h1>
+		<br />
 
 		<div id="owl-demo" class="owl-carousel owl-theme">
  
