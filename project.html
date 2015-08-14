@@ -1,0 +1,189 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="Abhijit Seal technologist researcher designer developer"/>
+<meta name="author" content="Abhijit Seal" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijit Seal</title>
+
+<!-- =========================
+     STYLESHEETS      
+============================== -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function ($){
+    $('#page_header').load('page_header.html', function() {
+        $('#page_header ul.nav a[href$="update.html"]').parent().addClass('active');
+    });
+    $('#page_footer').load('page_footer.html');
+    $("#inputGuess").keyup(function(event){
+		if(event.keyCode == 13){
+			$("#inputEnter").click();
+		}
+	});
+});
+</script>
+<script language="javascript">
+	var randNum = "";
+	var lastGuess = "";
+
+	function reset() {
+		randNum = "";
+		for (var i = 0; i < 8; i++)
+			randNum += Math.floor(Math.random() * 9).toString();
+		document.forms.guessQuiz.inputHint.value = '0';
+		document.forms.guessQuiz.inputAttempts.value = '0';
+		document.forms.guessQuiz.inputGuess.value = '';
+		document.forms.guessStatus.inputStatus.value = '';
+		document.forms.guessQuiz.inputEnter.disabled = false;
+		lastGuess = "";
+		alert(randNum);
+	}
+
+	function process(orig) {
+		var guess = document.forms.guessQuiz.inputGuess.value;
+
+		if (guess == lastGuess) {
+			return;
+		} else if (guess != orig) {
+			var hint = 0;
+
+			if (guess.length != 8) {
+				document.forms.guessStatus.inputStatus.style.color = 'red';
+				document.forms.guessStatus.inputStatus.value = 'The number must be 8 digit';
+				return;
+			}
+			lastGuess = guess;
+			for (var i = 0; i < 8; i++) {
+				var c = guess.charAt(i);
+				if (c < '0' || c > '9') {
+					document.forms.guessStatus.inputStatus.style.color = 'red';
+					document.forms.guessStatus.inputStatus.value = 'Only digits are allowed';
+					return;
+				}
+				if (orig.charAt(i) == guess.charAt(i)) hint++;
+			}
+			document.forms.guessQuiz.inputHint.value = hint.toString();
+			document.forms.guessStatus.inputStatus.value = '';
+
+		} else {
+			document.forms.guessStatus.inputStatus.style.color = 'green';
+			document.forms.guessStatus.inputStatus.style.fontsize = 'large';
+			document.forms.guessStatus.inputStatus.value = 'You got it!';
+			document.forms.guessQuiz.inputHint.value = '8';
+			document.forms.guessQuiz.inputEnter.disabled = true;
+		}
+		document.forms.guessQuiz.inputAttempts.value = 
+					(parseInt(document.forms.guessQuiz.inputAttempts.value)+1).toString();
+	}
+</script>
+
+<style>
+#inputGuess { width: 90px; }
+#inputHint { width: 35px; }
+#inputAttempts { width: 55px; }
+#inputStatus { width: 350px; text-align: center; background-color: transparent !important;border: none; font-weight: bold;}
+.panel-footer { text-align: center;}
+
+form input, form label {
+	margin: 4px;
+}
+</style>
+
+</head>
+
+<body>
+<!-- =========================
+   PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+
+<div id="page_header"></div>
+
+
+    <div class="container ft-ubuntu">
+		<h2>Fun Stuff</h2>
+
+		<h3>Guessing game</h3>
+		<p>For many people, guessing game is their first game program. This is a 'Hello World' of game programming. Here I added some twists to the basic guessing game, but nothing fancy.</p>
+		<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal" onclick='reset()'>
+			Play
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Guess the number</h4>
+					</div>
+					<div class="modal-body">
+						<div class="panel panel-default">
+						<div class="panel-heading">
+						<p>The objective of the game is to guess an 8 digit number.
+						Everytime you pick a number you will get a hint. The hint is
+						a number which tells how many digits of the guessed number
+						are at the same place as of the correct number.</p>
+						<p>The score keeps track of number of guesses.</p>
+						</div>
+						<div class="panel-body">
+
+						<form class="form-inline" onSubmit="" name="guessQuiz">
+							<div class="form-group">
+								<label for="guessedNum">Guess the number</label>
+								<input type="text" class="form-control" id="inputGuess" name="inputGuess" value="" maxlength="8"></input>
+								<input type="button" class="btn btn-primary" id="inputEnter" value="Guess" onclick='process(randNum)'>
+							</div>
+							<div class="form-group">
+								<label for="hint">Hint</label>
+								<input type="text" class="form-control" id="inputHint" name="inputHint" value="0" maxlength="1" readonly></input>
+							</div>
+							<div class="form-group">
+								<label for="attempts">Attempts</label>
+								<input type="text" class="form-control" id="inputAttempts" name="inputAttempts" value="0" maxlength="1" readonly></input>
+							</div>
+						</form>
+						</div> <!-- panel-body-->
+						<div class="panel-footer">
+						<form class="form-inline" onSubmit="" name="guessStatus">
+							<input type="text" id="inputStatus" name="inputStatus" value="" readonly="readonly" />
+						</form>
+						</div> <!-- panel-footer -->
+						</div> <!-- panel-default-->
+					</div> <!-- modal-body-->
+				</div>
+			</div>
+		</div>
+
+
+    </div> <!-- / END BIG CONTANER  -->
+
+</header> <!-- / END HOME SECTION  -->
+
+<div id="page_footer"></div>
+
+<!-- SCRIPTS -->
+
+</body>
+</html>
