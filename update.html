@@ -31,6 +31,11 @@ jQuery(document).ready(function ($){
 });
 </script>
 
+<style>
+h2 {
+    color: #3333CC;
+} 
+</style>
 </head>
 
 <body>
@@ -53,6 +58,16 @@ jQuery(document).ready(function ($){
     <div class="container ft-ubuntu">
         
         <!-- HEADING -->
+        <h2>Aug 22, 2015</h2>
+		<p>How to find the longest path (diameter) in a tree? For, binary tree, this can be achieved by recursively vising left and right nodes and calculating their diameters (<a href="http://www.geeksforgeeks.org/diameter-of-a-binary-tree/">link</a>). For, n-ary tree, we can use brute-force and run bfs/dfs on all nodes recording the max distance. But there is a very efficient way.</p>
+			<ul class="dash">
+				<li>Run BFS/DFS on any node to find the farthest leaf node.</li>
+				<li>Run BFS/DFS again on the previously found farthest node.</li>
+				<li>The longest path from the second run is the diameter of a tree</li>
+			</ul>
+			<p>The main idea here is that, the farthest point found in BFS/DFS starting from any node is actually one of the nodes in one of the longest paths. If you are looking for proof, you can find it <a href="http://www.quora.com/How-does-following-algorithm-for-finding-longest-path-in-tree-work">here</a>.</p>
+
+
         <h2>Aug 6, 2015</h2>
 		<p>Got some time today after office. Got the picture section up. I felt reeally good. There are some days, when things just happen without much effort. Although, most of my days are of opposite types <i class="fa fa-smile-o"></i></p>
 
