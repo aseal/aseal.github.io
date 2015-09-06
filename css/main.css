@@ -59,6 +59,11 @@
     color: #4875B4;
 }
 
+.fa-smile-o {
+    color: #fc8000;
+	font-weight: 400;
+}
+
 #owl-demo .item img{
     display: block;
     width: 100%;
