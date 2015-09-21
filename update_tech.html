@@ -1,0 +1,87 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="Abhijit Seal technologist researcher designer developer"/>
+<meta name="author" content="Abhijit Seal" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhijit Seal</title>
+
+<!-- =========================
+     STYLESHEETS      
+============================== -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!-- WEBFONT -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+<!-- JQUERY -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function ($){
+    $('#page_header').load('page_header.html', function() {
+        $('#page_header ul.nav a[href$="update.html"]').parent().addClass('active');
+    });
+    $('#page_footer').load('page_footer.html');
+});
+</script>
+
+<style>
+h2 {
+    color: #3333CC;
+} 
+</style>
+</head>
+
+<body>
+<!-- =========================
+   PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+
+<!-- =========================
+   HOME SECTION       
+============================== -->
+<header id="home" class="header">
+
+<div id="page_header"></div>
+    
+    
+    <!-- BIG HEADING WITH CALL TO ACTION BUTTONS AND SHORT MESSAGES -->
+    <div class="container ft-ubuntu">
+        
+        <!-- HEADING -->
+        <h2>Aug 27, 2015</h2>
+        <p>Presented "Introduction to SDN" today. I always find it hard to assimilate control plane virtualization with overlay. In my mind these are two different topics which have completely different purposes, design and implementation semantics. In control plane , we are managing the network sitting in middle of it, whereas in overlay we are slicing the network from an upper layer. I don't think vxlan and SDN controller can be put under same umbrella. May be, there is something that I don't quite understand yet, or may be not.</p>
+        <h2>Aug 22, 2015</h2>
+		<p>How to find the longest path (diameter) in a tree? For, binary tree, this can be achieved by recursively vising left and right nodes and calculating their diameters (<a href="http://www.geeksforgeeks.org/diameter-of-a-binary-tree/">link</a>). For, n-ary tree, we can use brute-force and run bfs/dfs on all nodes recording the max distance. But there is a very efficient way.</p>
+			<ul class="dash">
+				<li>Run BFS/DFS on any node to find the farthest leaf node.</li>
+				<li>Run BFS/DFS again on the previously found farthest node.</li>
+				<li>The longest path from the second run is the diameter of a tree</li>
+			</ul>
+			<p>The main idea here is that, the farthest point found in BFS/DFS starting from any node is actually one of the nodes in one of the longest paths. If you are looking for proof, you can find it <a href="http://www.quora.com/How-does-following-algorithm-for-finding-longest-path-in-tree-work">here</a>.</p>
+
+
+        <h2>July 31, 2015</h2>
+		<p>I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i>. I've quite a few plans on this project, I'm hoping to try more challenging stuff soon.</p>
+
+
+    </div> <!-- / END BIG CONTANER  -->
+
+</header> <!-- / END HOME SECTION  -->
+
+<div id="page_footer"></div>
+
+<!-- SCRIPTS -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
