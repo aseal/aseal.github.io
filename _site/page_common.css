@@ -1,0 +1,51 @@
+.ft-ubuntu {
+	font-family: 'Ubuntu', sans-serif;
+}
+.ft-architect-daughter {
+	font-family: 'Architects Daughter', cursive;
+    text-shadow: 0 1px 0 #ffffff;
+}
+.nav-pills {
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+}
+.nav-pills > li {
+	float:none;
+	display:inline-block;
+	display:inline; /* ie7 fix */
+	zoom:1; /* hasLayout ie7 trigger */
+}
+#footer {
+	position: fixed;
+	height: 30px;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	border-top: 2px solid rgb(50, 50, 50);
+}
+
+.main_img {
+	margin: 10px;
+}
+
+.fa-google-plus-square {
+    color: #C63D2D;
+}
+
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-twitter-square {
+    color: #00a0d1;
+}
+
+.fa-youtube-square {
+    color: #c4302b;
+}
+
+.fa-linkedin-square {
+    color: #4875B4;
+}
