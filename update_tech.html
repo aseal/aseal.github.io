@@ -58,27 +58,41 @@ h2 {
     <div class="container ft-ubuntu">
         
         <!-- HEADING -->
-        <h2>Oct 18, 2015</h2>
-        The Quikest way to find out if a number is power of 2: <br />
-            n == (n &amp (n-1))<br />
-        This is so easy to comprehend, but I managed to forget it in few occasions. So, thought of putting it out.
-        <h2>Aug 27, 2015</h2>
-        <p>Presented "Introduction to SDN" today. I always find it hard to assimilate control plane virtualization with overlay. In my mind these are two different topics which have completely different purposes, design and implementation semantics. In control plane , we are managing the network sitting in middle of it, whereas in overlay we are slicing the network from an upper layer. I don't think vxlan and SDN controller can be put under same umbrella. May be, there is something that I don't quite understand yet, or may be not.</p>
-        <h2>Aug 22, 2015</h2>
-		<p>How to find the longest path (diameter) in a tree? For, binary tree, this can be achieved by recursively vising left and right nodes and calculating their diameters (<a href="http://www.geeksforgeeks.org/diameter-of-a-binary-tree/">link</a>). For, n-ary tree, we can use brute-force and run bfs/dfs on all nodes recording the max distance. But there is a very efficient way.</p>
-			<ul class="dash">
-				<li>Run BFS/DFS on any node to find the farthest leaf node.</li>
-				<li>Run BFS/DFS again on the previously found farthest node.</li>
-				<li>The longest path from the second run is the diameter of a tree</li>
-			</ul>
-			<p>The main idea here is that, the farthest point found in BFS/DFS starting from any node is actually one of the nodes in one of the longest paths. If you are looking for proof, you can find it <a href="http://www.quora.com/How-does-following-algorithm-for-finding-longest-path-in-tree-work">here</a>.</p>
+        <h2>Back to My MAC</h2><h4>Jan 05, 2016</h4>
+        <p>For several years, I used port forwarding to connect to my home network. Leaving a port open is not good idea. It was hassle to open and close before and after use. Now I've multiple MACs. So I've switched to Back to My MAC feature</p>
+        <p>It can be set up by selecting System Preferences -&gt; iCloud -&gt; Back to My Mac. The remote Mac will appear under the Shared section of the sidebar in Finder.</p>
+        <p>When I was exploring this, I found there are few other ways as well -</p>
+        <ul>
+            <li>Mac contains a Screen Sharing feature, which is essentially a VNC server with some extra features. This allows standard VNC clients to control your Mac. It can be enabled at System Preferences -&gt; Sharing -&gt; Screen Sharing</li>
+            <li>Chrome Remote Desktop extentsion</li>
+            <li>Using <a href="http://www.teamviewer.com">TeamViewer</a> (just like logmein which is a paid service now.)</li>
+        </ul>
+        
+        <h2>How to model an optimization problem</h2><h4>Dec 18, 2015</h4>
+        <p>The first step towards solving an optimization problem, is modeling the problem. Here are the basic steps(with example of Knapsack problem).</p>
+        <ul ><!-- style="display: list-item; list-style-type:square">-->
+            <li>Choose some decision variables</li>
+            <ul>
+                <li>The decision variables (xi) select if the item to be included.</li>
+            </ul>
+            <li>Express the problem constraints in terms of these variables</li>
+            <ul>
+                <li>In case of knapsack problem, the constraint is max capacity</li>
+            </ul>
+            <li>Express the objective function</li>
+            <ul>
+                <li>Maximize the value in knapsack</li>
+            </ul>
+        </ul>
 
+        <h2>Borathon end - amazing, but could have been better </h2><h4>Dec 18, 2015</h4>
+        <p>In my opinion, we did quite well in Borathon, but, unfortunately, judges didn't agree :( Any way, we had lots of fun. We learnt a lot - built a product from an idea in just ~40 hrs.</p>
 
-        <h2>July 31, 2015</h2>
-		<p>I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i>. I've quite a few plans on this project, I'm hoping to try more challenging stuff soon.</p>
+        <h2>Borathon start</h2><h4>Dec 16, 2015</h4>
+        <p>I'm taking part in Borathon (Hackathon) in VMWare. It starts today. Friday we will demo our work. We are working on - "File based Backup Restore for Cloud Storage".</p>
 
-        <h2>Dec 1, 2015</h2>
-        <p>I've been looking for an efficient way to download videos from youtube. I used the sites - <a href="en.savefrom.net">en.savefrom.net</a> and <a href="keepvid.com">keepvid.com</a>. Finally came across youtube-dl. Voilà !! Now I can download youtube videos from command prompt, just like wget - I'm loving it. Here are some examples of what you can do -</p>
+        <h2>Download from youtube</h2><h4>Dec 1, 2015</h4>
+        <p>I've been looking for an efficient way to download videos from youtube. I used the sites - <a href="en.savefrom.net">en.savefrom.net</a> and <a href="keepvid.com">keepvid.com</a>. The sites work perfectly, but I was still looking for a way to do it more natively. Finally came across youtube-dl. Voilà !! Now I can download from command prompt, just like wget - I'm loving it. Here are some examples -</p>
         <table>
             <tr>
                 <td>List available formats</td>
@@ -94,12 +108,25 @@ h2 {
             </tr>
         </table>
 
+        <h2>Power of 2 detector</h2><h4>Oct 18, 2015</h4>
+        The Quikest way to find out if a number is power of 2: <br />
+            n == (n &amp (n-1))<br />
+        This is one of those things, which seems easy when you see it, but not so easy when you don't know it.
+        <h2>SDN presentation</h2><h4>Aug 27, 2015</h4>
+        <p>Presented "Introduction to SDN" today. I always find it hard to assimilate control plane virtualization with overlay. In my mind these are two different topics which have completely different purposes, design and implementation semantics. In control plane , we are managing the network sitting in middle of it, whereas in overlay we are slicing the network from an upper layer. I don't think vxlan and SDN controller can be put under same umbrella. May be, there is something that I don't quite understand yet, or may be not.</p>
+        <h2>Diameter of a tree</h2><h4>Aug 22, 2015</h4>
+		<p>How to find the longest path (diameter) in a tree? For, binary tree, this can be achieved by recursively vising left and right nodes and calculating their diameters (<a href="http://www.geeksforgeeks.org/diameter-of-a-binary-tree/">link</a>). For, n-ary tree, we can use brute-force and run bfs/dfs on all nodes recording the max distance. But there is a very efficient way.</p>
+			<ul class="dash">
+				<li>Run BFS/DFS on any node to find the farthest leaf node.</li>
+				<li>Run BFS/DFS again on the previously found farthest node.</li>
+				<li>The longest path from the second run is the diameter of a tree</li>
+			</ul>
+			<p>The main idea here is that, the farthest point found in BFS/DFS starting from any node is actually one of the nodes in one of the longest paths. If you are looking for proof, you can find it <a href="http://www.quora.com/How-does-following-algorithm-for-finding-longest-path-in-tree-work">here</a>.</p>
 
-        <h2>Dec 16, 2015</h2>
-        <p>I'm taking part in Borathon (Hackathon) in VMWare. It starts today. Friday we will demo our work. We are working on - "File based Backup Restore for Cloud Storage".</p>
 
-        <h2>Dec 18, 2015</h2>
-        <p>In my opinion, we did quite well in Borathon, but, unfortunately, judges didn't agree :( Any way, we had lots of fun. We learnt a lot - built a product from an idea in just ~40 hrs.</p>
+        <h2>Got my dnsmasq working on my PI</h2><h4>July 31, 2015</h4>
+		<p>I completed the configuration of dnsmasq. But, it is still not integrated with my router. Now, I'm extra-cautious not to get locked-out on my DNS server <i class="fa fa-smile-o"></i>. I've quite a few plans on this project, I'm hoping to try more challenging stuff soon.</p>
+
 
 
     </div> <!-- / END BIG CONTANER  -->
