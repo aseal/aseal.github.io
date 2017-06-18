@@ -6,7 +6,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          [-121.9111045, 37.5024925]
+          -121.9111045,
+          37.5024925
         ]
       },
       "properties": {
@@ -21,13 +22,14 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          [-121.8827066, 37.5124407]
+          -121.8827066,
+          37.5124407
         ]
       },
       "properties": {
         "marker-symbol": "park2",
         "name": "Mission Peak Hike",
-        "type": "Hiking",
+        "type": "Hiking"
       }
     }
   ]
