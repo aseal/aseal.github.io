@@ -11,7 +11,7 @@
         ]
       },
       "properties": {
-        "Marker-symbol": "entrance",
+        "marker-symbol": "entrance",
         "Name": "Mission Peak Hike Entrance",
         "Type": "Hiking",
         "Address": "270 Stanford Ave, Fremont, CA 9453"
@@ -27,7 +27,7 @@
         ]
       },
       "properties": {
-        "Marker-symbol": "park2",
+        "marker-symbol": "park2",
         "Name": "Mission Peak Hike End Point",
         "Type": "Hiking",
         "Address": "37°30'15.74\"N, 121°54'29.98\"W"
